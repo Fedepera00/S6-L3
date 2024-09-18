@@ -1,0 +1,10 @@
+@mixin spacings($size) {
+  padding: $size;
+  margin: $size;
+}
+
+// Usato per creare padding/margin dinamici
+@mixin margin-padding($direction, $size) {
+  #{"margin-#{$direction}"}: $size;
+  #{"padding-#{$direction}"}: $size;
+}

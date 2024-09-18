@@ -1,0 +1,12 @@
+@mixin floating($border-radius: 10px, $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), $border: none) {
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  border: $border;
+}
+
+// Griglia dinamica con 4 elementi
+@mixin grid($columns: 4) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: 20px;
+}

@@ -1,0 +1,14 @@
+@mixin fade-slide($duration, $delay) {
+  animation: fadeSlide $duration ease-in-out $delay forwards;
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

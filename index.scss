@@ -1,0 +1,46 @@
+@import "./partial/reset";
+@import "./partial/colors";
+@import "./partial/fonts";
+@import "./partial/spacings";
+@import "./partial/buttons";
+@import "./partial/mixins";
+@import "./partial/animations";
+// Codice SCSS principale del progetto (layout generale)
+
+.hero {
+  @include floating; // Applica il mixin floating
+  background-color: $bg_hero;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  .hero-content {
+    h1 {
+      @include title-big; // Usa il mixin per il titolo principale
+    }
+    p {
+      margin-bottom: 10px;
+    }
+
+    .hero-buttons {
+      button {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .hero-image {
+    @include floating; // Aggiungi il mixin floating per l'immagine
+  }
+}
+
+.grid {
+  @include grid(4); // Usa il mixin per creare una griglia a 4 colonne
+
+  padding: 20px;
+
+  .grid-item {
+    @include floating;
+  }
+}
